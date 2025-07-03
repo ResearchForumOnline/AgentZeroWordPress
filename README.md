@@ -4,6 +4,10 @@
   <img src="https://github.com/ResearchForumOnline/AgentZeroWordPress/blob/main/quantum-sentinel-avatar.png" alt="Quantum Sentinel Avatar" width="160">
 </p>
 
+*If you would like an AI chatbot that you can edit and re-brand without coding try our other plugin, though it is not using the advanced frameworks this Sentinel plugin is using.*
+Our other fully customizable plugin: 
+https://github.com/ResearchForumOnline/WordpressAIchatbot
+
 > **Modular AI assistant for WordPress — free ⚡ *Groq* by default, with effortless switches to xAI Grok, OpenAI GPT-4o/3.5 or Google Gemini, plus instant knowledge-base search.**
 
 [![WordPress 6.x](https://img.shields.io/badge/WordPress-6.x-blue.svg)](https://wordpress.org/)
