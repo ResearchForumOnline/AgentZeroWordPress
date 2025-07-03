@@ -5,7 +5,7 @@
 </p>
 
 *If you would like an AI chatbot that you can edit and re-brand without coding try our other plugin, though it is not using the advanced frameworks this Sentinel plugin is using.*
-Our other fully customizable plugin: 
+Our other WordPress plugin fully customizable plugin: 
 https://github.com/ResearchForumOnline/WordpressAIchatbot
 
 > **Modular AI assistant for WordPress — free ⚡ *Groq* by default, with effortless switches to xAI Grok, OpenAI GPT-4o/3.5 or Google Gemini, plus instant knowledge-base search.**
