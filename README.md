@@ -45,22 +45,32 @@
 ## 🏗 Architecture
 
 quantum-sentinel/
+
 ├── quantum-sentinel.php # Main loader & constants
+
 ├── admin/
+
 │ └── quantum-sentinel-admin.php
+
 ├── includes/
+
 │ ├── quantum-sentinel-core.php
+
 │ └── class-qs-client.php # Engine abstractions (Groq, xAI, OpenAI, Gemini)
+
 ├── assets/
+
 │ ├── quantum-sentinel-avatar.png
+
 │ ├── qs-chat.css
+
 │ └── qs-chat.js
+
 └── languages/
+
 └── quantum-sentinel.pot
 
-yaml
-Copy
-Edit
+
 
 *All engine endpoints extend `QS_Client_Base`, so adding a new provider is a 50-line subclass.*
 
