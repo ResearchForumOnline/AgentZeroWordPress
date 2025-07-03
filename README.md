@@ -44,3 +44,128 @@
 
 ## 🏗 Architecture
 
+quantum-sentinel/
+├── quantum-sentinel.php # Main loader & constants
+├── admin/
+│ └── quantum-sentinel-admin.php
+├── includes/
+│ ├── quantum-sentinel-core.php
+│ └── class-qs-client.php # Engine abstractions (Groq, xAI, OpenAI, Gemini)
+├── assets/
+│ ├── quantum-sentinel-avatar.png
+│ ├── qs-chat.css
+│ └── qs-chat.js
+└── languages/
+└── quantum-sentinel.pot
+
+yaml
+Copy
+Edit
+
+*All engine endpoints extend `QS_Client_Base`, so adding a new provider is a 50-line subclass.*
+
+---
+
+## 📦 Requirements
+
+| Item | Minimum |
+|------|---------|
+| **WordPress** | 5.8 (tested up to 6.5.0) |
+| **PHP** | 7.4 (fully tested on 8.3) |
+| **Browser** | Fetch & EventSource support (all modern browsers) |
+| **API Key** | Free Groq key *or* xAI / OpenAI / Gemini key(s) |
+
+---
+
+## 🛠 Installation
+
+```bash
+# 1. Download latest release
+wget https://github.com/ResearchForumOnline/AgentZeroWordPress/releases/latest/download/quantum-sentinel.zip
+
+# 2. Upload via WP-Admin or unzip into wp-content/plugins/
+unzip quantum-sentinel.zip -d wp-content/plugins/
+
+# 3. Activate
+wp plugin activate quantum-sentinel   # or use WP-Admin → Plugins
+
+# 4. Configure
+#   WP-Admin → Settings → Quantum Sentinel → enter API key(s)
+⚙️ Quick Configuration
+Setting	Default	Description
+AI Engine	groq	Choices: groq, xai, openai, gemini
+Model	llama3-70b-instruct	Engine-specific slug
+Temperature	0.7	0 = strict, 1 = creative
+Max Tokens	1024	Hard cap per reply
+KB Source	internal	internal, posts, both
+Log Retention	0	0 disables logging
+
+🚀 Usage
+Gutenberg Block
+Add the “Quantum Sentinel” block.
+
+Configure avatar side, theme (light, dark, auto) and KB subset.
+
+
+[quantum_sentinel avatar="right" theme="dark" kb="product_faqs"]
+PHP Helper
+php
+Copy
+Edit
+if ( function_exists( 'quantum_sentinel_render' ) ) {
+    echo quantum_sentinel_render( array(
+        'theme'   => 'auto',
+        'avatar'  => 'left',
+        'engine'  => 'openai',
+        'model'   => 'gpt-4o-mini',
+    ) );
+}
+🔧 Hooks & Filters
+Hook	Context
+qs_ai_request_args	Filter final request payload before HTTP call
+qs_system_prompt	Replace or augment the default system prompt
+qs_kb_items	Inject custom KB array programmatically
+qs_after_reply	Fires after each successful response ($chat_id, $reply)
+qs_user_avatar_url	Override the default avatar PNG
+
+Full list in docs/hooks.md.
+
+❓ FAQ
+<details> <summary><strong>Is Groq really free?</strong></summary>
+Yes. As of July 2025 Groq offers free access to Llama-3-70B for hobby and production use.
+Check their dashboard for current rate-limits before launch day.
+
+</details> <details> <summary><strong>Can I self-host the LLM?</strong></summary>
+Absolutely. Implement a QS_Client_MyLocalLLM subclass that returns OpenAI-compatible JSON and hook it via qs_client_factory.
+
+</details> <details> <summary><strong>Does Quantum Sentinel store user data?</strong></summary>
+Message logs are off by default. When enabled, you choose retention days (0 = none) and whether IPs are anonymised. All data lives in your own DB—no SaaS middle-man.
+
+</details>
+🗺 Roadmap
+ Server-Sent Events streaming
+
+ Vision endpoints (Gemini Pro Vision, GPT-4o-Vision)
+
+ Optional SQLite + pgvector vector store
+
+ Full React admin panel
+
+ Multisite (network-wide) settings
+
+🤝 Contributing
+Fork → git switch -c feature/your-feature
+
+composer install && npm install
+
+Run linters & tests: composer lint, npm run lint
+
+Pull Request with a clear description — GH Actions runs PHPCS, PHPUnit & Vitest
+
+After merge, your name appears in AUTHORS.md 🎉
+
+📜 License
+Quantum Sentinel is released under the MIT License, which is GPL-compatible.
+See LICENSE for the full text.
+
+
