@@ -1,5 +1,25 @@
 # 🚀 Quantum Sentinel
 
+## Downloads, Releases, And Discovery
+
+| Need | Link |
+| --- | --- |
+| GitHub repository | https://github.com/ResearchForumOnline/AgentZeroWordPress |
+| Source ZIP | https://github.com/ResearchForumOnline/AgentZeroWordPress/archive/refs/heads/main.zip |
+| GitHub releases | https://github.com/ResearchForumOnline/AgentZeroWordPress/releases |
+| TalkToAI ecosystem | https://talktoai.org/ |
+| Docs hub | https://docs.talktoai.org/ |
+
+WordPress AI assistant plugin material for multi-provider AI chat, site knowledge, and branded assistant workflows.
+
+Download the source ZIP or clone the repository, then package/upload the plugin through WordPress admin according to the repository instructions.
+
+~~~bash
+git clone https://github.com/ResearchForumOnline/AgentZeroWordPress.git
+~~~
+
+Search-friendly topics: WordPress AI assistant, WordPress chatbot, Groq WordPress plugin, OpenAI WordPress plugin, Gemini WordPress plugin, site knowledge chatbot.
+
 ## Featured TalkToAI Ecosystem Video
 
 [![TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure](https://i.ytimg.com/vi/R52hsRdCmSM/hqdefault.jpg)](https://www.youtube.com/watch?v=R52hsRdCmSM)
@@ -187,6 +207,4 @@ After merge, your name appears in AUTHORS.md 🎉
 📜 License
 Quantum Sentinel is released under the MIT License, which is GPL-compatible.
 See LICENSE for the full text.
-
-
 
