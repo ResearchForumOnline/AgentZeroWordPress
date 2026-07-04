@@ -1,5 +1,11 @@
 # 🚀 Quantum Sentinel
 
+## Featured TalkToAI Ecosystem Video
+
+[![TalkToAI: Sovereignty Through ZeroThink and OpenZero Infrastructure](https://i.ytimg.com/vi/R52hsRdCmSM/hqdefault.jpg)](https://www.youtube.com/watch?v=R52hsRdCmSM)
+
+A public overview of ZeroThink, OpenZero, FreeWebPanel, ZSEC, and the wider TalkToAI infrastructure. Watch it here: https://www.youtube.com/watch?v=R52hsRdCmSM
+
 <p align="center">
   <img src="https://github.com/ResearchForumOnline/AgentZeroWordPress/blob/main/quantum-sentinel-avatar.png" alt="Quantum Sentinel Avatar" width="160">
 </p>
@@ -181,5 +187,6 @@ After merge, your name appears in AUTHORS.md 🎉
 📜 License
 Quantum Sentinel is released under the MIT License, which is GPL-compatible.
 See LICENSE for the full text.
+
 
 
